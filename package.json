@@ -1,0 +1,21 @@
+{
+  "name": "com.optimove.weather.backend",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "APIXUKEY=$(cat .key) node app.js"
+  },
+  "dependencies": {
+    "apixu": "apixu/apixu-nodejs#master",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "express-session": "^1.15.6",
+    "mongoose": "^5.4.21",
+    "morgan": "~1.9.0",
+    "passport": "^0.4.0",
+    "passport-github": "^1.1.0",
+    "session-file-store": "^1.2.0",
+    "uuid": "^3.3.2"
+  }
+}

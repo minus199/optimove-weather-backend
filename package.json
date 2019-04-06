@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "APIXUKEY=$(cat .key) node app.js"
+    "start": "node app.js"
   },
   "dependencies": {
     "apixu": "apixu/apixu-nodejs#master",

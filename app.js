@@ -1,7 +1,15 @@
 const express = require('express');
-const {hostName,port} = require("./host")
+const { hostName, port } = require("./host")
 const mongoose = require('mongoose');
 const apiRouter = require('./routes/api');
+const assert = require("assert");
+
+['GITHUB_CID', 'GITHUB_SECRET', 'APIXUKEY'].forEach(envvar => {
+    if (!process.env[envvar]) {
+        console.error(`Please specify ${envvar} to boot server. Exiting...`);
+        process.exit(1);
+    }
+})
 
 mongoose.connect('mongodb://localhost/optimove_weather', { useNewUrlParser: true });
 const dbConn = mongoose.connection;

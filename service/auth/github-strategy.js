@@ -1,5 +1,4 @@
 const {hostName,port} = require("../../host")
-
 const GitHubStrategy = require("passport-github").Strategy
 const models = require("../../models")
 

@@ -4,8 +4,8 @@ const GitHubStrategy = require("passport-github").Strategy
 const models = require("../../models")
 
 const options = {
-    clientID: require("fs").readFileSync("./.github_cid", "utf8"),
-    clientSecret: require("fs").readFileSync("./.github_secret", "utf8"),
+    clientID: process.env.GITHUB_CID,
+    clientSecret: process.env.GITHUB_SECRET,
     callbackURL: `http://${hostName}:${port}/api/auth/github/callback`
 }
 
